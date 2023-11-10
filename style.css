@@ -1,0 +1,81 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #000000, #ffffff);
+}
+
+h1 {
+    text-align: center;
+    padding: 20px;
+    color: #ffffff;
+    margin: 0;
+    text-shadow: 2px 2px 4px rgba(255, 0, 0, 0.5);
+}
+
+#editor {
+    background-color: rgba(0, 0, 0, 0.8);
+    border: 1px solid #ff0000;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 800px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgb(255, 0, 0);
+}
+.blue-button {
+    background-color: rgb(255, 0, 0);
+    color: rgb(255, 255, 255);
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 10px 2px;
+    cursor: pointer;
+}
+.custom-textarea {
+    color: rgb(255, 0, 0); /* Change this to the color you want */
+    background-color: rgb(222, 208, 208); /* Optional background color */
+    width: 400px; /* Adjust the width as needed */
+    height: 150px; /* Adjust the height as needed */
+}
+.custom-file-input {
+    display: none; /* Hide the original file input */
+}
+
+.custom-file-label {
+    background-color: blue; /* Change this to the color you want */
+    color: white; /* Text color */
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.custom-file-input:focus + .custom-file-label {
+    outline: 1px dotted #ff0000; /* Add focus outline (optional) */
+}
+/* Change the color of the header */
+.header {
+    background-color: golden; /* Change to the desired color */
+    color: rgb(255, 0, 0); /* Change text color if needed */
+}
+/* Change the color of the blog preview section */
+.blog-preview {
+    background-color: black; /* Change to the desired background color */
+    color: golden; /* Change the text color if needed */
+}
+
+/* Change color of headings within the blog preview */
+.blog-preview h2 {
+    color: golden; /* Change heading color */
+}
+
+/* Change color of paragraphs within the blog preview */
+.blog-preview p {
+    color: golden; /* Change paragraph text color */
+}
+
+/* Change color of links within the blog preview */
+.blog-preview a {
+    color: blue; /* Change link color */
+}

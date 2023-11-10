@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Content Management Tool</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    <h1>Content Management Tool</h1>
+
+    <div id="editor">
+        <header class="header">
+        <h2>Add Content to Your Blog</h2></header>
+        <textarea class="custom-textarea" id="content" rows="4" cols="50" placeholder="Enter your text here"></textarea>
+        <input type="file" id="fileInput" class="custom-file-input">
+        <br>
+        <input type="file" id="image" accept="image/*" />
+        <button id="addImage" class="blue-button">Add Image</button>
+        <br>
+        <input type="text" id="video" placeholder="Embed video URL" />
+        <button id="addVideo" class="blue-button">Add Video</button>
+        <br>
+        <button id="publish" class="blue-button">Publish</button>
+    </div>
+
+    <div id="blog">
+        <h2>Blog Preview</h2>
+    </div>
+
+    <script>
+
+        const contentTextarea = document.getElementById('content');
+        const imageInput = document.getElementById('image');
+        const addImageBtn = document.getElementById('addImage');
+        const videoInput = document.getElementById('video');
+        const addVideoBtn = document.getElementById('addVideo');
+        const blogPreview = document.getElementById('blog');
+        const publishBtn = document.getElementById('publish');
+
+        addImageBtn.addEventListener('click', () => {
+            const imageUrl = imageInput.value;
+            const image = document.createElement('img');
+            image.src = imageUrl;
+            blogPreview.appendChild(image);
+            imageInput.value = '';
+        });
+
+        addVideoBtn.addEventListener('click', () => {
+            const videoUrl = videoInput.value;
+            const video = document.createElement('iframe');
+            video.src = videoUrl;
+            video.width = '560';
+            video.height = '315';
+            blogPreview.appendChild(video);
+            videoInput.value = '';
+        });
+
+        publishBtn.addEventListener('click', () => {
+            const content = contentTextarea.value;
+            const contentElement = document.createElement('p');
+            contentElement.textContent = content;
+            blogPreview.appendChild(contentElement);
+            contentTextarea.value = '';
+        });
+    </script>
+</body>
+</html>
